@@ -6,41 +6,47 @@
  * Require Statements
  *************************/
 const express = require("express");
-const expressLayouts = require("express-ejs-layouts")
-const env = require("dotenv").config()
+const expressLayouts = require("express-ejs-layouts");
+const env = require("dotenv").config();
 const app = express();
-const static = require("./routes/static")
+const static = require("./routes/static");
 
 
-app.use(static)
+app.use(static);
 
 /* ***********************
  *View Engine and Templates
  *************************/
-app.set("view engine", "ejs")
-app.use(expressLayouts)
-app.set("layout", "./layouts/layout") // not at views root
+app.set("view engine", "ejs");
+app.use(expressLayouts);
+app.set("layout", "./layouts/layout"); // not at views root
 
 /* ***********************
  * Routes
  *View Engine and Templates
  *************************/
-app.use(static)
+app.use(static);
 //Index route
-app.get("/", function(req, res){res.render("index", {title: "home"})})
+app.get("/", function(req, res){res.render("index", {title: "home"})});
 
 
 
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
- *************************/
+ ************************
 const port = process.env.PORT
 const host = process.env.HOST
 
 /* ***********************
  * Log statement to confirm server operation
- *************************/
+ ************************
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
+});*/
+
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`)
 })
