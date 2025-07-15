@@ -4,3 +4,130 @@
 *:after {
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: black;
+  background-image: linear-gradient(black 0.1em, transparent 0.1em),
+    linear-gradient(90deg, black 0.1em, transparent 0.1em);
+  background-size: 2em 2em;
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  border: 2px solid #00bfff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Estilos para el header principal */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+
+.siteName a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#tools a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.account-link {
+  font-size: 0.9em;
+  color: gray;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #111;
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.highlight {
+  color: #00bfff;
+}
+
+.hero-text button {
+  background-color: #00bfff;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-img {
+  max-width: 45%;
+  border-radius: 10px;
+}
+
+.info-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.upgrades ul,
+.reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+.upgrades ul li,
+.reviews ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.upgrades ul li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: gray;
+}
